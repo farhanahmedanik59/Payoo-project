@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <!-- tailwind Cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- font awsome Cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="bg-[#e2e5eb] h-[100vh]">
+    <header class="bg-slate-100 rounded-b-lg pb-5">
+      <!------------------------------------- navbar section ------------------------->
+      <section>
+        <nav class="h-[84px] w-full flex justify-between items-center border-b-1 border-gray-500">
+          <div class="flex w-1/2">
+            <div class="ml-1"><img src="../Payoo-MFS-Resources/assets/Group.png" alt="" class="h-[50px]" /></div>
+            <div class="ml-3">
+              <h1 class="font-bold">$<span>4500</span></h1>
+              <h1>Available Balance</h1>
+            </div>
+          </div>
+          <div class="mr-2">
+            <button class="btn text-[#08080880]"><i class="fa-solid fa-arrow-right-from-bracket rotate-180 text-gray-800"></i>Log Out</button>
+          </div>
+        </nav>
+      </section>
+      <!--------------------------------- welcome to payoo section ------------------------->
+      <section class="w-11/12 m-auto mt-5">
+        <h1 class="font-bold text-[24px]">🔥 Welcome to Payooo!</h1>
+        <p class="mt-[12px] text-[#08080880]">Enjoy easy and convenient financial services with us. Cashout charge is low and</p>
+      </section>
+      <section>
+        <div class="grid grid-cols-3 max-w-11/12 m-auto gap-5 mt-5">
+          <div class="border border-gray-500 text-center min-h-[90px] pt-5 rounded-lg">
+            <img class="mx-auto" src="../Payoo-MFS-Resources/assets/wallet1.png" alt="" />
+            <h1>Add Money</h1>
+          </div>
+          <div class="border border-gray-500 text-center min-h-[90px] pt-5 rounded-lg">
+            <img class="mx-auto" src="../Payoo-MFS-Resources/assets/send1.png" alt="" />
+            <h1>Cashout</h1>
+          </div>
+          <div class="border border-gray-500 text-center min-h-[90px] pt-5 rounded-lg">
+            <img class="mx-auto" src="../Payoo-MFS-Resources/assets/money1.png" alt="" />
+            <h1>Transfer Money</h1>
+          </div>
+          <div class="border border-gray-500 text-center min-h-[90px] pt-5 rounded-lg">
+            <img class="mx-auto" src="../Payoo-MFS-Resources/assets/bonus1.png" alt="" />
+            <h1>Get Bonus</h1>
+          </div>
+          <div class="border border-gray-500 text-center min-h-[90px] pt-5 rounded-lg">
+            <img class="mx-auto" src="../Payoo-MFS-Resources/assets/purse1.png" alt="" />
+            <h1>Pay Bill</h1>
+          </div>
+          <div class="border border-gray-500 text-center min-h-[90px] pt-5 rounded-lg">
+            <img class="mx-auto" src="../Payoo-MFS-Resources/assets/transaction1.png" alt="" />
+            <h1>Transactions</h1>
+          </div>
+        </div>
+      </section>
+    </header>
+    <footer>
+      <section>
+        <div class="max-w-11/12 m-auto">
+          <h1 class="mt-7">Add Money</h1>
+          <form action="" class="bg-slate-50 p-7 rounded-md mt-5">
+            <div>
+              <label for="">Select Bank</label>
+              <br />
+              <select class="select w-full rounded-xl" id="bank">
+                <option>Select a Bank</option>
+                <option>Dutch Bangla Bank</option>
+                <option>Sonali Bank</option>
+                <option>Grameen Bank</option>
+              </select>
+            </div>
+            <div class="mt-4">
+              <label for="">Bank Account Number</label>
+              <br />
+              <input type="text" placeholder="Enter 11 digit account number" class="input w-full rounded-xl" id="codeField" id="accountNumber" ; />
+            </div>
+            <div class="mt-4">
+              <label for="">Ammount to Add</label>
+              <br />
+              <input type="text" placeholder="Ammount" id="addMoney" class="input w-full rounded-xl"  />
+            </div>
+            <div class="mt-4">
+              <label for="">Pin Number</label>
+              <br />
+              <input type="text" placeholder="Enter 4 digit pin number" class="input w-full rounded-xl" id="pinNumber" />
+            </div>
+            <button class="btn btn-primary mt-4 w-full bg-[#0874F2] rounded-xl text-white" id="addMoneyBtn">Add Money</button>
+          </form>
+        </div>
+      </section>
+    </footer>
+    <script src="/script/home.js"></script>
+  </body>
+</html>

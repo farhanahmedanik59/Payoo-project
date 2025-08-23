@@ -6,10 +6,9 @@ document.getElementById("loginButton").addEventListener("click", function (event
   const pin = 1234;
   const numberField = parseInt(document.getElementById("numberField").value);
   const pinField = parseInt(document.getElementById("codeField").value);
-  console.log(numberField);
-  console.log(pinField);
+
   if (numberField === number && pinField === pin) {
-    window.location.href = "../home.html";
+    window.location.href = "../sub-pages/home.html";
   } else {
     alert("Invalid Credentials");
   }
