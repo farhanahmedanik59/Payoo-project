@@ -24,7 +24,7 @@
           <div class="flex w-1/2">
             <div class="ml-1"><img src="../Payoo-MFS-Resources/assets/Group.png" alt="" class="h-[50px]" /></div>
             <div class="ml-3">
-              <h1 class="font-bold">$<span>4500</span></h1>
+              <h1 class="font-bold">$<span id="cart-value">4500</span></h1>
               <h1>Available Balance</h1>
             </div>
           </div>
@@ -40,11 +40,11 @@
       </section>
       <section>
         <div class="grid grid-cols-3 max-w-11/12 m-auto gap-5 mt-5">
-          <div class="border border-gray-500 text-center min-h-[90px] pt-5 rounded-lg">
+          <div class="border border-gray-500 text-center min-h-[90px] pt-5 rounded-lg" id="add-money-box">
             <img class="mx-auto" src="../Payoo-MFS-Resources/assets/wallet1.png" alt="" />
             <h1>Add Money</h1>
           </div>
-          <div class="border border-gray-500 text-center min-h-[90px] pt-5 rounded-lg">
+          <div class="border border-gray-500 text-center min-h-[90px] pt-5 rounded-lg" id="cashout-box">
             <img class="mx-auto" src="../Payoo-MFS-Resources/assets/send1.png" alt="" />
             <h1>Cashout</h1>
           </div>
@@ -67,9 +67,9 @@
         </div>
       </section>
     </header>
-    <footer>
+    <footer class="bg-[#e2e5eb]">
       <section>
-        <div class="max-w-11/12 m-auto">
+        <div class="max-w-11/12 m-auto feature-section" id="add-money-parent">
           <h1 class="mt-7">Add Money</h1>
           <form action="" class="bg-slate-50 p-7 rounded-md mt-5">
             <div>
@@ -85,19 +85,43 @@
             <div class="mt-4">
               <label for="">Bank Account Number</label>
               <br />
-              <input type="text" placeholder="Enter 11 digit account number" class="input w-full rounded-xl" id="codeField" id="accountNumber" ; />
+              <input type="text" placeholder="Enter 11 digit account number" class="input w-full rounded-xl" id="accountNumber" ; />
             </div>
             <div class="mt-4">
               <label for="">Ammount to Add</label>
               <br />
-              <input type="text" placeholder="Ammount" id="addMoney" class="input w-full rounded-xl"  />
+              <input type="text" placeholder="Ammount" id="addMoney" class="input w-full rounded-xl" />
             </div>
             <div class="mt-4">
-              <label for="">Pin Number</label>
+              <label for="">Pin Number (Pin=1234)</label>
               <br />
               <input type="text" placeholder="Enter 4 digit pin number" class="input w-full rounded-xl" id="pinNumber" />
             </div>
             <button class="btn btn-primary mt-4 w-full bg-[#0874F2] rounded-xl text-white" id="addMoneyBtn">Add Money</button>
+          </form>
+        </div>
+      </section>
+      <!------------------Cash out feature Section ------------->
+      <section>
+        <div id="cashout-parent" class="max-w-11/12 m-auto hidden feature-section">
+          <h1 class="mt-7">Cash Out</h1>
+          <form action="" class="bg-white p-7 rounded-2xl w-full mt-5">
+            <div>
+              <label for="">Agent Number</label>
+              <br />
+              <input type="text" placeholder="Enter number" class="input w-full rounded-xl" id="agent-number" />
+            </div>
+            <div class="mt-4">
+              <label for="">Ammount</label>
+              <br />
+              <input type="text" placeholder="Ammount" class="input w-full rounded-xl" id="ammount" />
+            </div>
+            <div class="mt-4">
+              <label for="">4 Digit Pin</label>
+              <br />
+              <input type="text" placeholder="enter code" class="input w-full rounded-xl" id="pin-number" />
+            </div>
+            <button class="btn btn-primary mt-4 w-full bg-[#0874F2] rounded-xl text-white" id="cashout-btn">Cash Out</button>
           </form>
         </div>
       </section>

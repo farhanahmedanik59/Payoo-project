@@ -2,7 +2,7 @@
 
 document.getElementById("loginButton").addEventListener("click", function (event) {
   event.preventDefault();
-  const number = 123;
+  const number = 1234;
   const pin = 1234;
   const numberField = parseInt(document.getElementById("numberField").value);
   const pinField = parseInt(document.getElementById("codeField").value);
