@@ -40,15 +40,15 @@
       </section>
       <section>
         <div class="grid grid-cols-3 max-w-11/12 m-auto gap-5 mt-5">
-          <div class="border border-gray-500 text-center min-h-[90px] pt-5 rounded-lg" id="add-money-box">
+          <div class="border border-gray-500 text-center min-h-[90px] pt-5 rounded-lg box" id="add-money-box">
             <img class="mx-auto" src="../Payoo-MFS-Resources/assets/wallet1.png" alt="" />
             <h1>Add Money</h1>
           </div>
-          <div class="border border-gray-500 text-center min-h-[90px] pt-5 rounded-lg" id="cashout-box">
+          <div class="border border-gray-500 text-center min-h-[90px] pt-5 rounded-lg box" id="cashout-box">
             <img class="mx-auto" src="../Payoo-MFS-Resources/assets/send1.png" alt="" />
             <h1>Cashout</h1>
           </div>
-          <div class="border border-gray-500 text-center min-h-[90px] pt-5 rounded-lg">
+          <div class="border border-gray-500 text-center min-h-[90px] pt-5 rounded-lg box" id="transfer-box">
             <img class="mx-auto" src="../Payoo-MFS-Resources/assets/money1.png" alt="" />
             <h1>Transfer Money</h1>
           </div>
@@ -123,6 +123,49 @@
             </div>
             <button class="btn btn-primary mt-4 w-full bg-[#0874F2] rounded-xl text-white" id="cashout-btn">Cash Out</button>
           </form>
+        </div>
+      </section>
+      <!---------------------Transfer Money --------------------->
+      <section>
+        <div id="transfer-parent" class="max-w-11/12 m-auto feature-section hidden">
+          <h1 class="mt-7">Transfer</h1>
+          <form action="" class="bg-white p-7 rounded-2xl w-full mt-5">
+            <div>
+              <label for="">Account Number</label>
+              <br />
+              <input type="text" placeholder="Enter number" class="input w-full rounded-xl" id="agent-number" />
+            </div>
+            <div class="mt-4">
+              <label for="">Ammount</label>
+              <br />
+              <input type="text" placeholder="Ammount" class="input w-full rounded-xl" id="transfer-ammount" />
+            </div>
+            <div class="mt-4">
+              <label for="">Pin Number</label>
+              <br />
+              <input type="text" placeholder="enter code (pin=1234)" class="input w-full rounded-xl" id="pin-number" />
+            </div>
+            <button class="btn btn-primary mt-4 w-full bg-[#0874F2] rounded-xl text-white" id="transfer-btn">Send</button>
+          </form>
+        </div>
+      </section>
+      <section>
+        <div class="max-w-11/12 m-auto">
+          <div class="flex justify-between items-center mt-7">
+            <h1>Transfer</h1>
+            <h2>See All</h2>
+          </div>
+          <div class="h-[100vh] w-full mt-5">
+            <div class="flex items-center gap-4  bg-slate-50 rounded-lg">
+              <div class="rounded-full p-2 bg-[#c6c7c9] ml-1">
+                <img src="../Payoo-MFS-Resources/assets/wallet1.png" alt="" />
+              </div>
+              <div>
+                <h1>Bill</h1>
+                <p>Time</p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </footer>
