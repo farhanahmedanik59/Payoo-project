@@ -29,7 +29,7 @@
             </div>
           </div>
           <div class="mr-2">
-            <button class="btn text-[#08080880]"><i class="fa-solid fa-arrow-right-from-bracket rotate-180 text-gray-800"></i>Log Out</button>
+            <button class="btn text-[#08080880]" id="logout-btn"><i class="fa-solid fa-arrow-right-from-bracket rotate-180 text-gray-800"></i>Log Out</button>
           </div>
         </nav>
       </section>
@@ -60,7 +60,7 @@
             <img class="mx-auto" src="../Payoo-MFS-Resources/assets/purse1.png" alt="" />
             <h1>Pay Bill</h1>
           </div>
-          <div class="border border-gray-500 text-center min-h-[90px] pt-5 rounded-lg">
+          <div class="border border-gray-500 text-center min-h-[90px] pt-5 rounded-lg box" id="transaction-box">
             <img class="mx-auto" src="../Payoo-MFS-Resources/assets/transaction1.png" alt="" />
             <h1>Transactions</h1>
           </div>
@@ -150,22 +150,12 @@
         </div>
       </section>
       <section>
-        <div class="max-w-11/12 m-auto">
+        <div class="max-w-11/12 m-auto hidden feature-section" id="transaction-section">
           <div class="flex justify-between items-center mt-7">
             <h1>Transfer</h1>
             <h2>See All</h2>
           </div>
-          <div class="h-[100vh] w-full mt-5">
-            <div class="flex items-center gap-4  bg-slate-50 rounded-lg">
-              <div class="rounded-full p-2 bg-[#c6c7c9] ml-1">
-                <img src="../Payoo-MFS-Resources/assets/wallet1.png" alt="" />
-              </div>
-              <div>
-                <h1>Bill</h1>
-                <p>Time</p>
-              </div>
-            </div>
-          </div>
+          <div id="transaction-items"></div>
         </div>
       </section>
     </footer>

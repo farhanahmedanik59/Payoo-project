@@ -16,7 +16,7 @@ function getitem(id) {
   return item;
 }
 function getInputValueNumber(id) {
-  value = parseInt(document.getElementById(id).value);
+  const value = parseInt(document.getElementById(id).value);
   return value;
 }
 function pageDisable(id) {
@@ -45,6 +45,10 @@ document.getElementById("addMoneyBtn").addEventListener("click", function (event
     alert("Invalid Pin");
     return;
   }
+  if (addMoney === 0 || addMoney < 0) {
+    alert("Invalid Ammount");
+    return;
+  }
   const totalNewBalance = converted + addMoney;
   cartValue.innerText = totalNewBalance;
   const data = {
@@ -52,7 +56,6 @@ document.getElementById("addMoneyBtn").addEventListener("click", function (event
     date: new Date().toLocaleString(),
   };
   transactions.push(data);
-  console.log(transactions);
 });
 // Cash out Feature
 document.getElementById("cashout-btn").addEventListener("click", function (event) {
@@ -68,12 +71,15 @@ document.getElementById("cashout-btn").addEventListener("click", function (event
   console.log(cartAmmount);
   const newAmmount = cartAmmount - ammount;
   cart.innerText = newAmmount;
+  if (ammount > cartAmmount) {
+    alert("Invalid Ammount");
+    return;
+  }
   const data = {
     name: "Cash Out",
     date: new Date().toLocaleString(),
   };
   transactions.push(data);
-  console.log(transactions);
 });
 // Transfer Feature
 document.getElementById("transfer-btn").addEventListener("click", function (event) {
@@ -83,6 +89,11 @@ document.getElementById("transfer-btn").addEventListener("click", function (even
   const newAmmount = cartAmmount - ammount;
   console.log(newAmmount);
   document.getElementById("cart-value").innerText = newAmmount;
+});
+
+//logout feature
+document.getElementById("logout-btn").addEventListener("click", function () {
+  window.location.href = "../index.html";
 });
 // toggling feature
 document.getElementById("add-money-box").addEventListener("click", function (event) {
@@ -101,4 +112,34 @@ document.getElementById("cashout-box").addEventListener("click", function () {
 document.getElementById("transfer-box").addEventListener("click", function () {
   pageDisable("transfer-parent");
   btnStyle("transfer-box");
+});
+
+document.getElementById("transaction-box").addEventListener("click", function () {
+  pageDisable("transaction-section");
+
+  btnStyle("transaction-box");
+
+  const mainDiv = document.getElementById("transaction-items");
+  mainDiv.innerHTML = "";
+  if (transactions.length === 0) {
+    mainDiv.innerHTML = `<h1 class="text-center mt-10">No Transaction</h1>`;
+  }
+  for (const items of transactions) {
+    const div = document.createElement("div");
+    div.innerHTML = `<div>
+              <div class=" w-full mt-5">
+                <div class="flex items-center gap-4 bg-slate-50 rounded-lg">
+                  <div class="rounded-full p-2 bg-[#c6c7c9] ml-1">
+                    <img src="../Payoo-MFS-Resources/assets/wallet1.png" alt="" />
+                  </div>
+                  <div>
+                    <h1>${items.name}</h1>
+                    <p>${items.date}</p>
+                  </div>
+                </div>
+              </div>
+            </div>`;
+    mainDiv.appendChild(div);
+    console.log(items);
+  }
 });
