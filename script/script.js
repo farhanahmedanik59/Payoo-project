@@ -8,7 +8,10 @@ document.getElementById("loginButton").addEventListener("click", function (event
   const pinField = parseInt(document.getElementById("codeField").value);
 
   if (numberField === number && pinField === pin) {
-    window.location.href = "../sub-pages/home.html";
+    new Notification("Logged In", {
+      icon: "../Payoo-MFS-Resources/payoo.png",
+    });
+    window.location.href = ".././sub-pages/home.html";
   } else {
     alert("Invalid Credentials");
   }
