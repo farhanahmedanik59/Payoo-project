@@ -11,7 +11,7 @@ document.getElementById("loginButton").addEventListener("click", function (event
     new Notification("Logged In", {
       icon: "../Payoo-MFS-Resources/payoo.png",
     });
-    window.location.href = ".././sub-pages/home.html";
+    window.location.href = "./home.html";
   } else {
     alert("Invalid Credentials");
   }
