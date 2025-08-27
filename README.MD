@@ -13,7 +13,7 @@ It allows users to **log in, transfer money, check transaction history, and mana
 
 ## 📸 Preview
 
-! (./preview/image.png)
+![Dashboard](./preview/image.png)
 
 ## ✨ Features
 
